@@ -9,18 +9,16 @@ http://www.springframework.org/schema/context
 http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-   <bean id="methodReplacer"
-   class="com.example.helloworldspring.ch3.FormatMessageReplacer"/>
+   <bean id="parent"
+         class="com.example.helloworldspring.ch3.xml.Singer2"
+         p:name="John Mayer" p:age="39"
+   />
 
-   <bean id="replacementTarget"
-         class="com.example.helloworldspring.ch3.ReplacementTarget">
-      <replaced-method name="formatMessage" replacer="methodReplacer">
-         <arg-type>String</arg-type>
-      </replaced-method>
-   </bean>
+   <bean id="child"
+         class="com.example.helloworldspring.ch3.xml.Singer2"
+         parent="parent" p:age="0"
+   />
 
-   <bean id="standardTarget"
-         class="com.example.helloworldspring.ch3.ReplacementTarget"/>
 
 
 </beans>

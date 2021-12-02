@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="fooOne"
+    class="com.example.helloworldspring.ch3.sandbox.Foo" primary="true"/>
+
+    <bean id="fooTwo"
+          class="com.example.helloworldspring.ch3.sandbox.Foo"/>
+
+    <bean id="bar" class="com.example.helloworldspring.ch3.sandbox.Bar"/>
+
+    <bean id="targetByType"
+          class="com.example.helloworldspring.ch3.sandbox.TrickyTarget"
+    lazy-init="true">
+        <property name="bar" ref="bar"/>
+        <property name="fooTwo" ref="fooOne"/>
+        <property name="fooOne" ref="fooOne"/>
+    </bean>
+</beans>

@@ -17,9 +17,9 @@ public class NonSingletonDemo {
         Singer singer2 = ctx.getBean("nonSingleton", Singer.class);
 
         System.out.println("Indentity Equal?: "+ (singer1 == singer2));
-        System.out.println("Value Equal:? " + singer1.getName().equals(singer2.getName()));
-        System.out.println(singer1.getName());
-        System.out.println(singer2.getName());
+//        System.out.println("Value Equal:? " + singer1.getName().equals(singer2.getName()));
+//        System.out.println(singer1.getName());
+//        System.out.println(singer2.getName());
         ctx.close();
 
 
