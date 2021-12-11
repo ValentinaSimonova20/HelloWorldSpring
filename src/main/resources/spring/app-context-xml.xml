@@ -6,18 +6,17 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
        http://www.springframework.org/schema/beans/spring-beans.xsd
 http://www.springframework.org/schema/context
-http://www.springframework.org/schema/context/spring-context.xsd">
+http://www.springframework.org/schema/context/spring-context.xsd"
+default-lazy-init="true" default-init-method="init">
 
+<bean id="singerOne" class="com.example.helloworldspring.ch4.Singer"
+p:name="John Mayer" p:age="39"/>
 
-   <bean id="parent"
-         class="com.example.helloworldspring.ch3.xml.Singer2"
-         p:name="John Mayer" p:age="39"
+   <bean id="singerTwo" class="com.example.helloworldspring.ch4.Singer" p:age="72"
    />
 
-   <bean id="child"
-         class="com.example.helloworldspring.ch3.xml.Singer2"
-         parent="parent" p:age="0"
-   />
+   <bean id="singerThree" class="com.example.helloworldspring.ch4.Singer"
+   p:name="John Butler"/>
 
 
 
