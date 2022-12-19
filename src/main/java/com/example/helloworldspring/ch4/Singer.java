@@ -1,8 +1,10 @@
 package com.example.helloworldspring.ch4;
 
+
 import org.springframework.beans.factory.BeanCreationException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.GenericXmlApplicationContext;
+
 
 public class Singer {
     private static final String DEFAULT_NAME = "Eric Clapton";
@@ -61,4 +63,5 @@ public class Singer {
             return null;
         }
     }
+
 }
